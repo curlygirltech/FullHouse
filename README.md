@@ -34,6 +34,7 @@ GreenLight is a mentoring app for beginner coders connect with industry leaders 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
 Mobile Home screen: https://wireframe.cc/hx00vJ
+Mobile Mentor/Mentee screen: https://wireframe.cc/5nrgFn
 
 - Desktop Landing
 
@@ -63,8 +64,8 @@ Mobile Home screen: https://wireframe.cc/hx00vJ
 
 > The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+-Allow users to post info about themselves as a mentor or mentee
+-use airtable to 
 <br>
 
 #### MVP Goals
