@@ -44,12 +44,12 @@ https://wireframe.cc/a5TyB4
 
 | Day      | Deliverable                                | Status   |
 | -------- | ------------------------------------------ | -------- |
-| Monday   | Proposal Approval / Airtable Setup         | Incomplete |
-| Tuesday  | Component Creation / Get, Set Data         | Incomplete |
-| Wednesday| Form Creation/ Delete Data                 | Incomplete |
-| Thursday | Debug/ MVP                                 | Incomplete |
-| Friday   | Advanced CSS                               | Incomplete |
-| Monday   | Presentations                              | Incomplete |
+| Monday 15  | Proposal Approval / Airtable Setup         | Incomplete |
+| Tuesday 16 | Component Creation / Get, Set Data         | Incomplete |
+| Wednesday 17| Form Creation/ Delete Data                 | Incomplete |
+| Thursday 18 | Debug/ MVP                                 | Incomplete |
+| Friday  19 | Advanced CSS                               | Incomplete |
+| Monday 22     | Presentations                              | Incomplete |
 
 ## Timeframes
 
