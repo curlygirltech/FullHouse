@@ -7,10 +7,12 @@ import {useState, useEffect } from "react"
 import "./App.css";
 
 function App() {
+  const[data, setData]= useState([])
   useEffect(() => {
     const userData = async() => {
       const resp = await axios.get(baseURL, config)
       console.log(resp.data.records)
+      setData(resp.data.records)
     }
     userData()
 },[])
@@ -22,7 +24,11 @@ function App() {
       <Route path="/about">FullHouse About</Route>
       <Route path="/blog">FullHouse Blog</Route>
       <Route path="/newform"></Route>
-      <Route path="/connectionpage"></Route>
+      <Route path="/connectionpage">
+        <div className="connection-container">
+          
+        </div>
+      </Route>
       <div className="app-title">
         <h1>FullHouse</h1>
       </div>
