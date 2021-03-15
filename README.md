@@ -3,7 +3,7 @@ FullHouse
 
 ### Description
 
-FullHouse is a mentoring app for beginner coders connect with industry leaders who specialize in your coding language. Post a message as a mentor or mentee, best times to chat, and languages you specialize in. Members can enter rooms based on their language of choice and contribute to the blog.     
+FullHouse is frontend react app that focuses on connecting beginner coders with industry leaders who specialize in their coding language. Memebers are able to post a message as a mentor or mentee, languages you specialize in and contact information.(PostMVP) Mentees can enter rooms based on their language of choice and contribute to the blog to help other curious learners.     
 <br>
 
 ### Wireframes
@@ -47,6 +47,7 @@ Mobile Mentor/Mentee screen: https://wireframe.cc/5nrgFn
 
 - "Contribute to blog" feature
 - Create rooms for each language 
+- CSS animations to home page 
 
 ## Project Schedule
 
@@ -63,20 +64,20 @@ Mobile Mentor/Mentee screen: https://wireframe.cc/5nrgFn
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Styling Homepage          |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Component Setup           |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Airtable setup            |    H     |      3hrs      |      1hr      |     1hr     |
-| Clickable links           |    H     |      3hrs      |      1hr      |     1hr     |
-| Footer                    |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Mentee Form               |    H     |      3hrs      |     1 hr      |    1 hr     |
-| Mentor Form               |    H     |      3hrs      |     1 hr      |     1hr     |
-| Data creation/update      |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Delete Data               |    H     |      2hrs      |      1hr      |     1hr     |
-| Post Data                 |    H     |      3hrs      |      1hr      |     1hr     |
-| Navbar                    |    H     |      3hrs      |      1hr      |     1hr     |
-| Component CSS             |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Total                     |    H     |      36hrs     |     35hrs     |    35hrs    |
+| Proposal                  |    H     |      2hrs      |      hr       |    hrs     |
+| Styling Homepage          |    H     |      2hrs      |      hr       |    hrs     |
+| Component Setup           |    H     |      3hrs      |      hr       |    hrs     |
+| Airtable setup            |    H     |      3hrs      |      hr       |     hr     |
+| Clickable links           |    H     |      3hrs      |      hr       |     hr     |
+| Footer                    |    H     |      3hrs      |      hr       |    hrs     |
+| Mentee Form               |    H     |      3hrs      |      hr       |    hr      |
+| Mentor Form               |    H     |      3hrs      |      hr       |    hr      |
+| Data creation/update      |    H     |      3hrs      |      hr       |    hrs     |
+| Delete Data               |    H     |      2hrs      |      hr       |     hr     |
+| Post Data                 |    H     |      3hrs      |      hr       |     hr     |
+| Navbar                    |    H     |      3hrs      |      hr       |     hr     |
+| Component CSS             |    H     |      3hrs      |      hr       |    hrs     |
+| Total                     |    H     |      36hrs     |               |            |
 
 <br>
 
@@ -135,12 +136,12 @@ src
       |__ images
       |__ wireframes
 |__ components/
-      |__ Header.jsx
-      |__ Hero.jsx
-      |__ Ipsum.jsx
-      |__ Lorem.jsx
-      |__ CTA.jsx
-      |__ Footer.jsx
+      |__ Navbar.jsx
+      |__ Mentor Form.jsx
+      |__ Mentee Form.jsx
+      |__ Blog.jsx 
+      |__ About.jsx (Info about FullHouse)
+      |__ Footer.jsx  (Contact Info)
 ```
 
 <br>
@@ -149,7 +150,14 @@ src
 
 ## Project Delivery
 
-> The Project Delivery section should be completed as your work on your project.
+###Strengths
+-I'm confident on my ability to use airtable and work with the API
+###Weaknesses
+-My main weakness is connecting my components to my app and making sure they are rendered properly.
+###Opportunities
+-Since this projects allows me to use everything I learned in the past unit, it's a great opportunity to solidify concepts I was shacky on.
+###Threats
+Im in the process of managing my time better as it pertains to running into errors and unexpected issues. When I get stuck, it's really hard to move on or at least handle another part of the project.
 
 ### Code Showcase
 
