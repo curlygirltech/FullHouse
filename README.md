@@ -3,37 +3,28 @@ FullHouse
 
 ### Description
 
-FullHouse is frontend react app that focuses on connecting beginner coders with industry leaders who specialize in their coding language. Memebers are able to post a message as a mentor or mentee, languages you specialize in and contact information.(PostMVP) Mentees can enter rooms based on their language of choice and contribute to the blog to help other curious learners.     
+FullHouse is frontend react app that focuses on connecting beginner coders with industry leaders who specialize in their coding language. Members are able to sign up and are brought to a page to connect. On the connection page, you can post a message as a mentor or mentee, languages you specialize in and contact information.(PostMVP) Mentees can enter rooms based on their language of choice and contribute to the blog to help other curious learners.     
 <br>
 
 ### Wireframes
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-Mobile Home screen: https://wireframe.cc/hx00vJ
-Mobile Mentor/Mentee screen: https://wireframe.cc/5nrgFn
+Mobile Home screen:
 
-- Desktop Landing
+https://wireframe.cc/hx00vJ
 
-![Dummy Link](url)
+Mobile Mentor/Mentee screen:
+https://wireframe.cc/5nrgFn
 
-- Desktop Body
+Desktop:
+https://wireframe.cc/cQ3Nwi
 
-![Dummy Link](url)
+Tablet Home Screen:
+https://wireframe.cc/LHUjxU
 
-- Desktop Resource Index
-
-![Dummy Link](url)
-
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+Tablet connect screen:
+https://wireframe.cc/a5TyB4
 
 <br>
 
@@ -46,7 +37,7 @@ Mobile Mentor/Mentee screen: https://wireframe.cc/5nrgFn
 #### PostMVP
 
 - "Contribute to blog" feature
-- Create rooms for each language 
+- Create "rooms" for each language 
 - CSS animations to home page 
 
 ## Project Schedule
@@ -130,18 +121,17 @@ Sample Query Results:
 
 ```
 src
-|__ assets/
-      |__ data-tests
-      |__ fonts
-      |__ images
-      |__ wireframes
-|__ components/
-      |__ Navbar.jsx
-      |__ Mentor Form.jsx
-      |__ Mentee Form.jsx
-      |__ Blog.jsx 
-      |__ About.jsx (Info about FullHouse)
-      |__ Footer.jsx  (Contact Info)
+        App
+       /    \ 
+ Home -------|__ components/
+   |              |__ Navbar.jsx
+ Navbar           |__ MentorForm.jsx (/new)
+ Footer           |__ MenteeForm.jsx (/new)
+                  |__ ConnectionPage.jsx (List of Mentors with Language experience)
+                  |__ About.jsx (Info about FullHouse)
+                  |__ Footer.jsx  (Contact Info)
+
+  
 ```
 
 <br>
