@@ -29,9 +29,10 @@ https://wireframe.cc/a5TyB4
 <br>
 
 ### MVP Goals
--home page with clickable links to navigate through app
--use airtable to get data of mentors and mentees
--update/delete data using airtable 
+
+- home page with clickable links to navigate through app
+- use airtable to get data of mentors and mentees
+- update/delete data using airtable 
 <br>
 
 #### PostMVP
@@ -117,8 +118,6 @@ Sample Query Results:
 
 #### MVP Components
 
-> Use this section to define your React components and the data architecture of your app.
-
 ```
 src
         App
@@ -140,13 +139,20 @@ src
 
 ## Project Delivery
 
-###Strengths
+### Strengths
+
 -I'm confident on my ability to use airtable and work with the API
-###Weaknesses
+
+### Weaknesses
+
 -My main weakness is connecting my components to my app and making sure they are rendered properly.
-###Opportunities
+
+### Opportunities
+
 -Since this projects allows me to use everything I learned in the past unit, it's a great opportunity to solidify concepts I was shacky on.
-###Threats
+
+### Threats
+
 Im in the process of managing my time better as it pertains to running into errors and unexpected issues. When I get stuck, it's really hard to move on or at least handle another part of the project.
 
 ### Code Showcase
