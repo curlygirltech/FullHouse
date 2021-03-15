@@ -1,32 +1,9 @@
-# PROJECT 2 README <!-- omit in toc -->
-
-- [Project Planning](#Project-Planning)
-  - [Description](#Description)
-  - [Wireframes](#Wireframes)
-  - [MVP](#MVP)
-    - [MVP Goals](#MVP-Goals)
-    - [MVP API](#MVP-API)
-    - [MVP Libraries & Dependencies](#MVP-Libraries--Dependencies)
-    - [MVP Components](#MVP-Components)
-    - [MVP Breakdown](#MVP-Breakdown)
-    - [MVP Timeframes](#MVP-Timeframes)
-  - [Post-MVP](#Post-MVP)
-- [Project Delivery](#Project-Delivery)
-  - [Code Showcase](#Code-Showcase)
-  - [Code Issues & Resolutions](#Code-Issues--Resolutions)
-
-## Project Planning
-
-> The Project Planning section should be completed for your project pitch with instructors.
->
-> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
-
-<br>
+### Project Name 
+FullHouse
 
 ### Description
 
-GreenLight is a mentoring app for beginner coders connect with industry leaders who specialize in your coding language. Post a message as a mentor or mentee, best times to chat, and languages you specialize in. Members can respond to    lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+FullHouse is a mentoring app for beginner coders connect with industry leaders who specialize in your coding language. Post a message as a mentor or mentee, best times to chat, and languages you specialize in. Members can enter rooms based on their language of choice and contribute to the blog.     
 <br>
 
 ### Wireframes
@@ -60,49 +37,89 @@ Mobile Mentor/Mentee screen: https://wireframe.cc/5nrgFn
 
 <br>
 
-### MVP
-
-> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
--Allow users to post info about themselves as a mentor or mentee
--use airtable to 
+### MVP Goals
+-home page with clickable links to navigate through app
+-use airtable to get data of mentors and mentees
+-update/delete data using airtable 
 <br>
 
-#### MVP Goals
+#### PostMVP
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- "Contribute to blog" feature
+- Create rooms for each language 
+
+## Project Schedule
+
+| Day      | Deliverable                                | Status   |
+| -------- | ------------------------------------------ | -------- |
+| Monday   | Proposal Approval / Airtable Setup         | Incomplete |
+| Tuesday  | Component Creation / Get, Set Data         | Incomplete |
+| Wednesday| Form Creation/ Delete Data                 | Incomplete |
+| Thursday | Debug/ MVP                                 | Incomplete |
+| Friday   | Advanced CSS                               | Incomplete |
+| Monday   | Presentations                              | Incomplete |
+
+## Timeframes
+
+| Component                 | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Styling Homepage          |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Component Setup           |    H     |      3hrs      |     2hrs      |    2hrs     |
+| Airtable setup            |    H     |      3hrs      |      1hr      |     1hr     |
+| Clickable links           |    H     |      3hrs      |      1hr      |     1hr     |
+| Footer                    |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Mentee Form               |    H     |      3hrs      |     1 hr      |    1 hr     |
+| Mentor Form               |    H     |      3hrs      |     1 hr      |     1hr     |
+| Data creation/update      |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Delete Data               |    H     |      2hrs      |      1hr      |     1hr     |
+| Post Data                 |    H     |      3hrs      |      1hr      |     1hr     |
+| Navbar                    |    H     |      3hrs      |      1hr      |     1hr     |
+| Component CSS             |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Total                     |    H     |      36hrs     |     35hrs     |    35hrs    |
 
 <br>
 
 #### MVP API
 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
-
-|    API     | Quality Docs? | Documentation | Sample Query                            |
-| :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WeatherAPI |      yes      | _example.com_ | _example.com/mickeymouse?s=movies&t=10_ |
+Mentee Table: https://airtable.com/tblg824rvqCKcqOFF/viwKdP0GMWsvMElqd?blocks=hide
+Mentor Table: https://airtable.com/tblRFUJ6pMxFMFDW0/viw89pyqjieI1Ei9M?blocks=hide
 
 Sample Query Results:
 
 ```json
+{
+    "records": [
+        {
+            "id": "recLEZD9hBaV2ibaW",
+            "fields": {
+                "name": "Joanna Brown",
+                "aboutMe": "New coder looking to learn Javascript",
+                "language": "Javascript",
+                "contact": "Joanna Brown"
+            },
+            "createdTime": "2021-03-14T23:27:11.000Z"
+        },
+        {
+            "id": "recDu10k2kttdQ3cN",
+            "fields": {
+                "name": "Joshua  Kingston",
+                "language": "Python",
+                "aboutMe": "Enthusiastic Student looking to learn Python ",
+                "contact": "Joshua Kingston on IG"
+            },
+            "createdTime": "2021-03-14T23:27:11.000Z"
+        },
+        {
+            "id": "recBVptsebbnXC3TV",
+            "fields": {},
+            "createdTime": "2021-03-14T23:27:11.000Z"
+        }
+    ],
+    "offset": "recBVptsebbnXC3TV"
+}
 
 ```
-
-<br>
-
-#### MVP Libraries & Dependencies
-
-> Use this section to list the key supporting libraries and their role in the project.
-
-|   Library    | Description                                |
-| :----------: | :----------------------------------------- |
-|    React     | _Lorem ipsum dolor sit amet, consectetur._ |
-| React Router | _Lorem ipsum dolor sit amet, consectetur._ |
-| React Spring | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br>
 
@@ -125,50 +142,6 @@ src
       |__ CTA.jsx
       |__ Footer.jsx
 ```
-
-<br>
-
-#### MVP Breakdown
-
-> Use this section to go into further depth regarding every component, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
-|  Component   |    Type    | state | props | hooks | Description                                |
-| :----------: | :--------: | :---: | :---: | :---: | :----------------------------------------- |
-|    App.js    |   class    |   y   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Header    | functional |   n   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Navigation  | functional |   n   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Home     | functional |   n   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Index     | functional |   n   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Detail    | functional |   n   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|   Gallery    |   class    |   y   |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Gallery Card | functional |   n   |   y   |   y   | _Lorem ipsum dolor sit amet, consectetur._ |
-|    Footer    | functional |   n   |   n   |   n   | _Lorem ipsum dolor sit amet, consectetur._ |
-
-<br>
-
-#### MVP Timeframes
-
-> Use this section to estimate the time necessary to build out each of the components you've described above. 
->
-> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
-
-| Task             | Priority | Estimated Time | Time Invested | Actual Time |
-| ---------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Lorem Ipsum      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL            |          |     6 hrs      |     3 hrs     |     TBD     |
-
-<br>
-
-### Post-MVP
-
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
-- _Lorem ipsum._
-- _Lorem ipsum._
 
 <br>
 
