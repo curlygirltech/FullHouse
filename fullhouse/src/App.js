@@ -4,6 +4,7 @@ import Footer from "./components/Footer"
 import './App.css';
 
 function App() {
+  
 console.log(process.env)
   return (
 <div>      
