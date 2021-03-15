@@ -3,7 +3,7 @@ FullHouse
 
 ### Description
 
-FullHouse is frontend react app that focuses on connecting beginner coders with industry leaders who specialize in their coding language. Members are able to sign up and are brought to a page to connect. On the connection page, you can post a message as a mentor or mentee, languages you specialize in and contact information.(PostMVP) Mentees can enter rooms based on their language of choice and contribute to the blog to help other curious learners.     
+FullHouse is frontend react app that focuses on connecting beginner coders with industry leaders who specialize in their coding language. Members are able to sign up and are brought to a page to connect. On the connection page, you can find mentors in languages you specialize in, and their contact information.(PostMVP) Mentees can enter rooms based on their language of choice and contribute to the blog to help other curious learners.     
 <br>
 
 ### Wireframes
