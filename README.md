@@ -8,8 +8,6 @@ FullHouse is frontend react app that focuses on connecting beginner coders with 
 
 ### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
-
 Mobile Home screen:
 
 https://wireframe.cc/hx00vJ
@@ -32,14 +30,15 @@ https://wireframe.cc/a5TyB4
 
 - home page with clickable links to navigate through app
 - use airtable to get data of mentors and mentees
-- update/delete data using airtable 
+- route mentors or mentees to specific connection page with rendered info
 <br>
 
 #### PostMVP
 
 - "Contribute to blog" feature
 - Create "rooms" for each language 
-- CSS animations to home page 
+- CSS animations to home page
+- update/delete data using airtable 
 
 ## Project Schedule
 
@@ -61,7 +60,7 @@ https://wireframe.cc/a5TyB4
 | Component Setup           |    H     |      3hrs      |      hr       |    hrs     |
 | Airtable setup            |    H     |      3hrs      |      hr       |     hr     |
 | Clickable links           |    H     |      3hrs      |      hr       |     hr     |
-| Footer                    |    H     |      3hrs      |      hr       |    hrs     |
+| Footer                    |    H     |      1hrs      |      hr       |    hrs     |
 | Mentee Form               |    H     |      3hrs      |      hr       |    hr      |
 | Mentor Form               |    H     |      3hrs      |      hr       |    hr      |
 | Data creation/update      |    H     |      3hrs      |      hr       |    hrs     |
@@ -69,7 +68,8 @@ https://wireframe.cc/a5TyB4
 | Post Data                 |    H     |      3hrs      |      hr       |     hr     |
 | Navbar                    |    H     |      3hrs      |      hr       |     hr     |
 | Component CSS             |    H     |      3hrs      |      hr       |    hrs     |
-| Total                     |    H     |      36hrs     |               |            |
+| Media quieries/RD         |    H     |      3hrs      |      hr       |    hrs     |
+| Total                     |    H     |      37hrs     |               |            |
 
 <br>
 
@@ -84,32 +84,38 @@ Sample Query Results:
 {
     "records": [
         {
-            "id": "recLEZD9hBaV2ibaW",
+            "id": "recFH8m8MOHYp99oE",
             "fields": {
-                "name": "Joanna Brown",
-                "aboutMe": "New coder looking to learn Javascript",
-                "language": "Javascript",
-                "contact": "Joanna Brown"
+                "contact": "@AnitaBakerson on IG",
+                "name": "Anita Bakerson",
+                "aboutMe": "Polished professional looking to help beginners master Java",
+                "language": [
+                    "Java"
+                ],
+                "relationship": "mentor"
             },
-            "createdTime": "2021-03-14T23:27:11.000Z"
+            "createdTime": "2021-03-14T23:16:45.000Z"
         },
         {
-            "id": "recDu10k2kttdQ3cN",
+            "id": "recMLsWbYAHxijTDF",
             "fields": {
-                "name": "Joshua  Kingston",
-                "language": "Python",
-                "aboutMe": "Enthusiastic Student looking to learn Python ",
-                "contact": "Joshua Kingston on IG"
+                "contact": "@FeliciaG on twitter\n",
+                "name": "Felicia Gerard",
+                "aboutMe": "Expert in c++ with 10 years experience looking to help others learn",
+                "language": [
+                    "c++"
+                ],
+                "relationship": "mentor"
             },
-            "createdTime": "2021-03-14T23:27:11.000Z"
+            "createdTime": "2021-03-14T23:16:45.000Z"
         },
         {
-            "id": "recBVptsebbnXC3TV",
+            "id": "rec4YsxLBVpafuAx9",
             "fields": {},
-            "createdTime": "2021-03-14T23:27:11.000Z"
+            "createdTime": "2021-03-14T23:16:45.000Z"
         }
     ],
-    "offset": "recBVptsebbnXC3TV"
+    "offset": "rec4YsxLBVpafuAx9"
 }
 
 ```
@@ -119,16 +125,17 @@ Sample Query Results:
 #### MVP Components
 
 ```
-src
-        App
-       /    \ 
- Home -------|__ components/
-   |              |__ Navbar.jsx
- Navbar           |__ MentorForm.jsx (/new)
- Footer           |__ MenteeForm.jsx (/new)
-                  |__ ConnectionPage.jsx (List of Mentors with Language experience)
-                  |__ About.jsx (Info about FullHouse)
-                  |__ Footer.jsx  (Contact Info)
+
+ App
+  |
+ src
+  |_Home -------|__ components/
+                 |__ Navbar/Footer
+                 |__ MentorForm.jsx (/new)
+                 |__ MenteeForm.jsx (/new)
+                 |__ ConnectionPage.jsx (List of Mentors with Language experience)
+                 |__ About.jsx (Info about FullHouse)
+                 
 
   
 ```
