@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 export default function MentorForm() {
   return (
-    <div>
+    <div className="mentor-form">
       <h1>Mentor Form</h1>
     </div>
   )

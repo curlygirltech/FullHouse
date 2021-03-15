@@ -2,8 +2,8 @@
 
 export default function About() {
   return (
-    <div>
-      <h2>About</h2>
+    <div className="about-app">
+      <p>About</p>
     </div>
   )
 }

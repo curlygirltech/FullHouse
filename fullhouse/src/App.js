@@ -1,14 +1,18 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+// import {useState} from "react"
 import './App.css';
 
 function App() {
+console.log(process.env)
   return (
-    <div className="App">
-      <h1>Homepage</h1>
+<div>      
       <Navbar />
-      <Footer />
+    <div className="app-title">
+        <h1>FullHouse</h1>
     </div>
+      <Footer />    
+</div>
   );
 }
 
