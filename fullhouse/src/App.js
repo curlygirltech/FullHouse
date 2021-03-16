@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SignUpForm from "./components/SignUpForm"
 import ConnectionPage from "./components/ConnectionPage";
 import { Route } from "react-router-dom";
-import SignUpForm from "./components/SignUpForm"
 import axios from "axios"
 import { baseURL, config } from "./services"
 import {useState, useEffect } from "react"
@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState([])
-  const [role, setRole] = useState("mentee")
+  const [role, setRole] = useState()
   useEffect(() => {
     const userData = async() => {
       const resp = await axios.get(baseURL, config)
