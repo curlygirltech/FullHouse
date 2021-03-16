@@ -1,6 +1,7 @@
 import { baseURL, config } from "../services"
 import { Link, Route } from "react"
 import ConnectionPage from "./ConnectionPage"
+import {useParams} from "react-router-dom"
 import {useState, useEffect} from "react"
 import axios from "axios"
 
@@ -10,7 +11,7 @@ export default function SignUpForm(props) {
   const [aboutYou, setAboutYou] = useState("")
   const [contact, setContact] = useState("")
   const [languages, setLanguages] = useState("")
-  const { role } = props
+  const { role } = useParams();
 
 
   const handleSubmit = async (e) => {

@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState([])
-  const [role, setRole] = useState() //this is to autofill the form based on who is a mentee/mentor
+  const [role, setRole] = useState("") //this is to autofill the form based on who is a mentee/mentor
   useEffect(() => {
     const userData = async() => {
       const resp = await axios.get(baseURL, config)
@@ -32,18 +32,20 @@ function App() {
         <h1>FullHouse</h1>
       </div>
       <Route exact path="/">FullHouse Home
-        <Link to="/newform"> 
-          <button>Mentor</button>
+        <div>
+        <Link to="/mentor"> 
+          <div>Mentor</div>
         </Link>
-        <Link to="/newform" >
+        </div>
+        <Link to="/mentee" >
           <button>Mentee</button>
         </Link>
       </Route>
+      <Route path="/:role">
+        <SignUpForm />
+      </Route>
       <Route path="/about">FullHouse About</Route>
       <Route path="/blog">FullHouse Blog</Route>
-      <Route path="/newform">
-        <SignUpForm key={role} role={role}/>
-      </Route>
       <Route path="/connections">
             <ConnectionPage data={data} />
         </Route>
