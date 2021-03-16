@@ -19,7 +19,7 @@ function App() {
       console.log(resp.data.records)
       const relationship = Object.keys(resp.data.records)
       setRole(relationship) 
-      console.log(setRole(relationship))
+      // console.log(setRole(relationship))
 
     }
     userData()
