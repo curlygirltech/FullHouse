@@ -1,14 +1,17 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ConnectionPage from "./components/ConnectionPage";
 import { Route } from "react-router-dom";
+import SignUpForm from "./components/SignUpForm"
 import axios from "axios"
 import { baseURL, config } from "./services"
 import {useState, useEffect } from "react"
 import "./App.css";
-import ConnectionPage from "./components/ConnectionPage";
+
 
 function App() {
-  const[data, setData]= useState([])
+  const [data, setData] = useState([])
+  const [role, setRole] = useState("mentee")
   useEffect(() => {
     const userData = async() => {
       const resp = await axios.get(baseURL, config)
@@ -24,14 +27,12 @@ function App() {
       <Route exact path="/">FullHouse Home</Route>
       <Route path="/about">FullHouse About</Route>
       <Route path="/blog">FullHouse Blog</Route>
-      <Route path="/newform"></Route>
-      <Route path="/connectionpage">
-        <div className="connection-container">
-          {data.map((data) => (
-            <ConnectionPage ConnectionPage={ConnectionPage} />
-          ))}
-        </div>
+      <Route path="/newform">
+        <SignUpForm role={role}/>
       </Route>
+      <Route path="/connections">
+            <ConnectionPage data={data} />
+        </Route>
       <div className="app-title">
         <h1>FullHouse</h1>
       </div>
