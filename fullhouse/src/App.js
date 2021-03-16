@@ -5,6 +5,7 @@ import axios from "axios"
 import { baseURL, config } from "./services"
 import {useState, useEffect } from "react"
 import "./App.css";
+import ConnectionPage from "./components/ConnectionPage";
 
 function App() {
   const[data, setData]= useState([])
@@ -26,7 +27,9 @@ function App() {
       <Route path="/newform"></Route>
       <Route path="/connectionpage">
         <div className="connection-container">
-          
+          {data.map((data) => (
+            <ConnectionPage ConnectionPage={ConnectionPage} />
+          ))}
         </div>
       </Route>
       <div className="app-title">
