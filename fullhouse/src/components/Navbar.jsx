@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import About from "./About"
+// import About from "./About"
 
 export default function Navbar() {
   return (
