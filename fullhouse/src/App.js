@@ -54,7 +54,7 @@ function App() {
       <Route path="/blog">FullHouse Blog</Route>
 
       <Route path="/connections">
-        <ConnectionPage data={data} role={role}/>
+        <ConnectionPage data={data} role={role} setToggleFetch={setToggleFetch}/>
       </Route>
       <Footer />
     </div>

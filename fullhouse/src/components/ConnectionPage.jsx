@@ -5,11 +5,12 @@ import {useParams} from "react-router-dom"
 
 export default function ConnectionPage(props) {
   const { data, role,} = props;
-  // const { name, aboutMe, languages, contact, } = mentorMentee.fields;
-  const { id } = useParams();
   
-  const deleteMember = async () => {
-    const memberURL = `${baseURL}/${props.data.id}`
+  
+  const deleteMember = async (memberId) => {
+    console.log(memberId)
+    
+    const memberURL = `${baseURL}/${memberId}`
     await axios.delete(memberURL, config)
     props.setToggleFetch((curr)=>!curr)
   }
@@ -35,6 +36,7 @@ export default function ConnectionPage(props) {
       <div className="connect-container">
         <h3>Let's Connect</h3>
         {filtered.map((person) => {
+          console.log(person)
           const {
             name,
             contact,
@@ -49,8 +51,8 @@ export default function ConnectionPage(props) {
               <p>{aboutMe}</p>
               <p>{relationship}</p>
               <p>{contact}</p>
-              <button onClick={deleteMember}>Delete</button>
-              
+              <button onClick={()=>deleteMember(person.id)}>Delete</button>
+              {/* //calling the function with an argument. i need to invoke the function inside of an anonoymous function */}
             </div>
           );
         })}
