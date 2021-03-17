@@ -1,5 +1,8 @@
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
 .navbar {
   display: flex;
   font-size: 30px;
-  background-color: aqua;
+  justify-content: center;
+  /* background-color: darkgoldenrod; */
+  }
 }

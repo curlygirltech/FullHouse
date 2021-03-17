@@ -1,10 +1,23 @@
-export default function ConnectionPage(props) {
-  const { data, role } = props;
+import axios from "axios";
+import "../componentcss/connection.css"
+import { baseURL, config } from "../services"
+import {useParams} from "react-router-dom"
 
+export default function ConnectionPage(props) {
+  const { data, role,} = props;
+  // const { name, aboutMe, languages, contact, } = mentorMentee.fields;
+  const { id } = useParams();
+  
+  const deleteMember = async () => {
+    const memberURL = `${baseURL}/${props.data.id}`
+    await axios.delete(memberURL, config)
+    props.setToggleFetch((curr)=>!curr)
+  }
+    
   const filtered = data.filter((member) => {
     return member.fields.relationship !== role;
   });
-  console.log(filtered);
+  // console.log(filtered);
 
   //use filter method through entries based on whats in props, get the mentees or mentors
   //output that on the page
@@ -30,12 +43,14 @@ export default function ConnectionPage(props) {
             language,
           } = person.fields;
           return (
-            <div>
+            <div >
               <h1>{name}</h1>
               <p>{language}</p>
               <p>{aboutMe}</p>
               <p>{relationship}</p>
               <p>{contact}</p>
+              <button onClick={deleteMember}>Delete</button>
+              
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 import { baseURL, config } from "../services"
 import { Link, Route } from "react"
 import ConnectionPage from "./ConnectionPage"
+import "../componentcss/signupform.css"
 import {useParams, useHistory} from "react-router-dom"
 import {useState, useEffect} from "react"
 import axios from "axios"

@@ -1,4 +1,4 @@
-
+import "../componentcss/blog.css"
 
 export default function Blog() {
   return (
