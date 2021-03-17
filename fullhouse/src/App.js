@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignUpForm from "./components/SignUpForm";
+import Blog from "./components/Blog"
 import ConnectionPage from "./components/ConnectionPage";
 import { Link, Route } from "react-router-dom";
 import axios from "axios";
