@@ -1,7 +1,8 @@
 import axios from "axios";
 import "../componentcss/connection.css"
 import { baseURL, config } from "../services"
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
+
 
 export default function ConnectionPage(props) {
   const { data, role,} = props;

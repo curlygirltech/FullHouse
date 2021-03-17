@@ -1,3 +1,15 @@
-.mentor-form{
-  background-color: coral;
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
+
+  .mentor-form{
+    
+  }
+  .languages{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .icon-container{
+    font-size: 66px;
+    height: 200px;
+  }
 }
