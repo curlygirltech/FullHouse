@@ -30,7 +30,7 @@ function App() {
       <div className="app-title">
         <h1>FullHouse</h1>
         <button className="home-button">
-          <img src="https://imgur.com/R8YS8uf.png" />
+          <img src="https://imgur.com/R8YS8uf.png" alt="app-logo" />
         </button>
       </div>
       <Route exact path="/">
