@@ -21,15 +21,15 @@ function App() {
     };
     userData();
   }, [toggleFetch]);
-
+  
+  
   return (
     <div>
       <Navbar />
       <div className="app-title">
         <h1>FullHouse</h1>
       </div>
-      <Route exact path="/">
-        FullHouse Home
+      <Route exact path="/">        
         <div className="mentor-link">
           <Link to="/newform/mentor">
             <div onClick={() => setRole("mentor")}>Mentor</div>

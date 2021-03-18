@@ -5,13 +5,14 @@ import axios from "axios";
 
 
 export default function Blog(props) {
-  const [name, setName] = useState("")
-  const [blogPost, setBlogPost] = useState("");
+  const [name, setName] = useState([])
+  const [post, setPost] = useState([]) //axios post call
+  const [getblogPost, setGetBlogPost] = useState(""); // axios get call
 
   useEffect(() => {
     const userPost = async () => {
       const resp = await axios.get(blogURL, config);
-      setBlogPost(resp.data.records);
+      setGetBlogPost(resp.data.records);
       console.log(resp.data.records);
     };
     userPost();
@@ -20,7 +21,7 @@ export default function Blog(props) {
     e.preventDefault();
     const newPost = {
       name,
-      blogPost,
+      post,
     };
     console.log(newPost);
     const res = await axios.post(blogURL, { fields: newPost }, config);
@@ -33,16 +34,28 @@ export default function Blog(props) {
       <div className="post-container">
         <form onSubmit={handleSubmit}>
           <label htmlFor="post">Make a post</label>
-          <input type="text" value={post} placeholder="make a post" />
+          <input type="text" value={post} onChange={(e) => setPost(e.target.value)} placeholder="make a post" />
           <label htmlFor="author">Author</label>
-          <input type="text" value={name} placeholder="name" />
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="name" />
           <button type="submit">Post</button>
         </form>
-        <div>
-          <h1>{name}</h1>
-          <p>{post}</p>
-        </div>
       </div>
+      {/* <div>
+        {post.map((post) => {
+          const  {
+            name,
+            post,
+          } = memberPost
+          console.log(rederedPost)
+          return (
+            <div >
+              <h1>{name}</h1>
+              <p>{post}</p>
+            </div>
+          )
+        })}
+      </div> */}
     </div>
-  );
+  
+  )
 }

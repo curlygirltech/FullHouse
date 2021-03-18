@@ -1,8 +1,16 @@
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
 .navbar {
   display: flex;
   font-size: 30px;
   justify-content: center;
-  /* background-color: darkgoldenrod; */
+  background-color: darkgoldenrod;
   }
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
+  .navbar{
+    background-color: darkgreen;
+    font-size: 15px;
+    /* justify-content: left; */
+  }
+
 }
