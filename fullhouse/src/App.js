@@ -1,4 +1,3 @@
-// import Fullhouse from "./Fullhouse.png"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignUpForm from "./components/SignUpForm";
