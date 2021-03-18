@@ -1,3 +1,4 @@
+// import Fullhouse from "./Fullhouse.png"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignUpForm from "./components/SignUpForm";
@@ -28,8 +29,12 @@ function App() {
       <Navbar />
       <div className="app-title">
         <h1>FullHouse</h1>
+        <button className="home-button">
+          <img src="https://imgur.com/R8YS8uf.png" />
+        </button>
       </div>
-      <Route exact path="/">        
+      <Route exact path="/">
+      
         <div className="mentor-link">
           <Link to="/newform/mentor">
             <div onClick={() => setRole("mentor")}>Mentor</div>

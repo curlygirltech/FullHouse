@@ -1,6 +1,18 @@
 *{
   border: gold solid 2px;
 }
+
+.home-button img{
+  height: 50px;
+  width: 50px;
+  background: none ;
+}
+
+.home-button{
+  background: none;
+  border: none;
+  background-color: none;
+}
 body{
   display: flex;
   justify-content: center;

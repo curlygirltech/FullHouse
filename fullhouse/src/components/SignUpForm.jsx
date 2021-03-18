@@ -10,11 +10,40 @@ export default function SignUpForm(props) {
   const [name, setName] = useState("");
   const [aboutMe, setAboutMe] = useState("");
   const [contact, setContact] = useState("");
-  const [languages, setLanguages] = useState("");
+  const [languages, setLanguages] = useState([])
+  // const [multipleLanguages, setMultilpleLanguages] = useState([])
   const { role } = useParams();
   const history = useHistory();
+  const languageIcons = [
+    {
+      icon: <i class="devicon-python-plain-wordmark"></i>,
+      name: "Python"
+    },
 
-  // useEffect(()=> )
+    {
+      icon: <i class="devicon-javascript-plain"></i>,
+      name: "javascript"
+    },
+
+    {
+      icon: <i class="devicon-php-plain"></i>,
+      name: "PHP"
+    },
+
+    {
+      icon: <i class="devicon-react-original-wordmark"></i>,
+      name: "React"
+    },
+
+    {
+      icon: <i class="devicon-java-plain-wordmark"></i>,
+      name: "Java"
+    },
+  ];
+
+  const clickedLanguages = (name) => {
+    setLanguages([...languages, name])
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,12 +55,13 @@ export default function SignUpForm(props) {
       relationship: role,
     };
     console.log(newMember);
-    const res = await axios.post(baseURL, { fields: newMember }, config);
+    const res = await axios.post(baseURL, { fields: newMember, typecast: true }, config);
 
     console.log(res);
     props.setToggleFetch((curr) => !curr);
     history.push("/connections");
   };
+
   return (
     <div className="mentor-form">
       <h1>{`${role} Form`}</h1>
@@ -60,27 +90,12 @@ export default function SignUpForm(props) {
           value={contact}
           onChange={(e) => setContact(e.target.value)}
         />
-        {/* <label htmlFor="languages"></label> */}
-        {/* <input required type="text" value={languages} onChange={(e)=>setLanguages(e.target.value) } /> */}
         <div className="languages">
-          <div className="icon-container">
-            <i class="devicon-python-plain-wordmark"></i>
-          </div>
-          <div className="icon-container">
-            <i class="devicon-javascript-plain"></i>
-          </div>
-          <div className="icon-container">
-            <p><i class="devicon-php-plain"></i></p>
-          </div>
-          <div className="icon-container">
-            <p><i class="devicon-c-plain"></i></p>
-          </div>
-          <div className="icon-container">
-            <p><i class="devicon-react-original-wordmark"></i></p>
-          </div>
-          <div className="icon-container">
-            <i class="devicon-java-plain-wordmark"></i>
-          </div>
+          {languageIcons.map((language, index) => (
+            <div key={index} onClick={()=>clickedLanguages(language.name)}> 
+              {language.icon}
+            </div>
+          ))}
         </div>
         <input type="text" disabled value={role} placeholder={role} />
         <button type="submit">Submit</button>

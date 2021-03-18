@@ -40,13 +40,13 @@ export default function Blog(props) {
           <button type="submit">Post</button>
         </form>
       </div>
-      {/* <div>
-        {post.map((post) => {
+      <div>
+        {post.map((memberPost) => {
           const  {
             name,
             post,
           } = memberPost
-          console.log(rederedPost)
+          console.log()
           return (
             <div >
               <h1>{name}</h1>
@@ -54,7 +54,7 @@ export default function Blog(props) {
             </div>
           )
         })}
-      </div> */}
+      </div>
     </div>
   
   )
