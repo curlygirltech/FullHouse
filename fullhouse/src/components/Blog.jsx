@@ -7,7 +7,7 @@ import axios from "axios";
 export default function Blog(props) {
   const [name, setName] = useState([])
   const [post, setPost] = useState([]) //axios post call
-  const [getblogPost, setGetBlogPost] = useState(""); // axios get call
+  const [getBlogPost, setGetBlogPost] = useState([]); // axios get call
 
   useEffect(() => {
     const userPost = async () => {
@@ -20,12 +20,10 @@ export default function Blog(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = {
-      name,
-      post,
+      name: name,
+      post: post,
     };
-    console.log(newPost);
     const res = await axios.post(blogURL, { fields: newPost }, config);
-    console.log(res);
     props.setToggleFetch((curr) => !curr);
   };
 
@@ -41,19 +39,14 @@ export default function Blog(props) {
         </form>
       </div>
       <div>
-        {post.map((memberPost) => {
-          const  {
-            name,
-            post,
-          } = memberPost
-          console.log()
-          return (
+        {getBlogPost.map((post) => ( //you are mapping through youre info from your get call
+          <div className="map-function">        
             <div >
-              <h1>{name}</h1>
-              <p>{post}</p>
-            </div>
-          )
-        })}
+              <h1>{post.fields.name}</h1>
+              <p>{post.fields.post}</p>
+            </div>        
+          </div>
+        ))}
       </div>
     </div>
   

@@ -43,12 +43,12 @@ export default function ConnectionPage(props) {
             contact,
             aboutMe,
             relationship,
-            language,
+            languages,
           } = person.fields;
           return (
             <div >
               <h1>{name}</h1>
-              <p>{language}</p>
+              <p>{languages}</p>
               <p>{aboutMe}</p>
               <p>{relationship}</p>
               <p>{contact}</p>
