@@ -7,6 +7,8 @@
     /* height: 50px; */
     margin: 10px auto;
     align-items: flex-end;
+    color:white;
+    background-color: black;
   }
   
   .footer-name{
@@ -19,6 +21,7 @@
   .social-media{
     margin: auto;
     flex-flow: wrap;
+    background-color: white;
   }
   .linked-in{
   margin: auto;

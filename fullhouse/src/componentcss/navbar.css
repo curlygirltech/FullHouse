@@ -1,16 +1,26 @@
 .navbar {
   display: flex;
-  font-size: 30px;
-  justify-content: center;
-  background-color: darkgoldenrod;
+  font-size: 20px;
+  justify-content: right;
+  background-color:black;
+  color: white;
+  text-decoration: none;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 5px;
   }
 
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px){
   .navbar{
-    background-color: darkgreen;
+    background-color:black;
+    color: white;
+    text-decoration: none;
     font-size: 15px;
-    /* justify-content: left; */
+    justify-content: left;
   }
 
-}
+} */
