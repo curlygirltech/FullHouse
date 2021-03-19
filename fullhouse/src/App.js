@@ -23,7 +23,7 @@ function App() {
   }, [toggleFetch]);
 
   return (
-    <div>
+    <div className="extra-body-div">
       <Navbar />
       <div className="app-title">
         <Link to="/">
