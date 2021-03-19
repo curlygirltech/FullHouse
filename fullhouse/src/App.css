@@ -10,9 +10,15 @@ text-decoration: none;
 body{  
   display: flex;  
   justify-content: center;
+  
   height: 100%;
   width: 100%;
   min-height: 819px;
+}
+
+.home-text{
+  text-align: center;
+  margin: 10px 15px; 
 }
 
 form {
@@ -34,6 +40,7 @@ input[type=text]:focus {
 button{
   display: flex;
   justify-content: center;
+  /* flex-direction: row; */
   align-content: center;
   background-color: #F37DEE;
   text-decoration: none;
@@ -50,7 +57,7 @@ button{
 
 
 button:hover {
-background-color: #70D6FF;
+background-color:#FFEF45;
 color: white;
 transform:scale(1.1);
 }
@@ -62,13 +69,14 @@ transform:scale(1.1);
 .body-2{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color: blue;
-  
+  background-color:white;
+  /* margin-top: 250px; */
 }
 
 #root {
   height: 100%;
   width: 100%;
+  min-height: 800px;
 }
 
 .app-title{

@@ -31,7 +31,11 @@ function App() {
         </Link>
       </div>
         <div className="body-2"> 
-      <Route exact path="/">
+        <Route exact path="/">
+          <div className="home-text">
+        <h2>Welcome to Full House</h2>
+        <p>A home for beginner coders to connect with coding professionals</p>
+          </div>
         <div className="mentor-link">
           <Link to="/newform/mentor">
             <button onClick={() => setRole("Mentor")}>Mentor</button>
