@@ -21,27 +21,25 @@ function App() {
     };
     userData();
   }, [toggleFetch]);
-  
-  
+
   return (
     <div>
       <Navbar />
       <div className="app-title">
-        
-        <button className="home-button">
-          <img src="https://imgur.com/R8YS8uf.png" alt="app-logo" />
-        </button>
+        <Link to="/">
+          <img src="https://imgur.com/k1mgdye.png" alt="app-logo" />
+        </Link>
       </div>
+        <div className="body-2"> 
       <Route exact path="/">
-      
         <div className="mentor-link">
           <Link to="/newform/mentor">
-            <div onClick={() => setRole("mentor")}>Mentor</div>
+            <button onClick={() => setRole("Mentor")}>Mentor</button>
           </Link>
         </div>
         <div>
           <Link to="/newform/mentee">
-            <button onClick={() => setRole("mentee")}>Mentee</button>
+            <button onClick={() => setRole("Mentee")}>Mentee</button>
           </Link>
         </div>
       </Route>
@@ -53,7 +51,7 @@ function App() {
 
       <Route path="/blog">
         FullHouse Blog
-        <Blog setToggleFetch={setToggleFetch}/>
+        <Blog setToggleFetch={setToggleFetch} />
       </Route>
 
       <Route path="/connections">
@@ -61,9 +59,10 @@ function App() {
           data={data}
           role={role}
           setToggleFetch={setToggleFetch}
-        />
+          />
       </Route>
       <Footer />
+          </div>
     </div>
   );
 }

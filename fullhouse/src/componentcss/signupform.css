@@ -1,13 +1,54 @@
   .mentor-form{
+    /* display: flex; */
+    font-size: 2em;
+
+  }
+
+  form {
+    flex-flow: column;
+    margin:15px;
     
   }
-  .languages{
+
+  .mentor-form h1{
     display: flex;
-    flex-direction: row;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    justify-content: center;
   }
   
+  .languages{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:  space-between;
+  }
+  
+  input[type=text] {
+    width:100%;
+    border: none;
+    border-bottom: 2px solid gray;
+    transition: width 0.4s ease-in-out;
+  }
+
+  input[type=text]:focus {
+    width: 100%;
+  }
+
   .icon-container{
     font-size: 66px;
     height: 200px;
   }
+ 
+  button{
+    display: flex;
+    justify-content: center;
+    background-color:purple;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    font-family: 'Ranchers', cursive;
+    margin: 10px 0;
 
+  }

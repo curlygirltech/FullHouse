@@ -8,39 +8,43 @@ export default function SignUpForm(props) {
   const [name, setName] = useState("");
   const [aboutMe, setAboutMe] = useState("");
   const [contact, setContact] = useState("");
-  const [languages, setLanguages] = useState([])
+  const [languages, setLanguages] = useState([]);
   // const [multipleLanguages, setMultilpleLanguages] = useState([])
   const { role } = useParams();
   const history = useHistory();
   const languageIcons = [
     {
       icon: <i class="devicon-python-plain-wordmark"></i>,
-      name: "Python"
+      name: "Python",
     },
 
     {
       icon: <i class="devicon-javascript-plain"></i>,
-      name: "javascript"
+      name: "javascript",
     },
 
     {
       icon: <i class="devicon-php-plain"></i>,
-      name: "PHP"
+      name: "PHP",
     },
 
     {
       icon: <i class="devicon-react-original-wordmark"></i>,
-      name: "React"
+      name: "React",
     },
 
     {
       icon: <i class="devicon-java-plain-wordmark"></i>,
-      name: "Java"
+      name: "Java",
+    },
+    {
+      icon: <i class="devicon-c-plain colored"></i>,
+      name: "C"
     },
   ];
 
   const clickedLanguages = (name) => {
-    setLanguages([...languages, name])
+    setLanguages([...languages, name]);
   };
 
   const handleSubmit = async (e) => {
@@ -53,7 +57,11 @@ export default function SignUpForm(props) {
       relationship: role,
     };
     console.log(newMember);
-    const res = await axios.post(baseURL, { fields: newMember, typecast: true }, config);
+    const res = await axios.post(
+      baseURL,
+      { fields: newMember, typecast: true },
+      config
+    );
 
     console.log(res);
     props.setToggleFetch((curr) => !curr);
@@ -62,8 +70,8 @@ export default function SignUpForm(props) {
 
   return (
     <div className="mentor-form">
-      <h1>{`${role} Form`}</h1>
-      <form onSubmit={handleSubmit}>
+      <h1>{`${role} form`}</h1>
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="name"></label>
         <input
           required
@@ -90,13 +98,13 @@ export default function SignUpForm(props) {
         />
         <div className="languages">
           {languageIcons.map((language, index) => (
-            <div key={index} onClick={()=>clickedLanguages(language.name)}> 
+            <div key={index} onClick={() => clickedLanguages(language.name)}>
               {language.icon}
             </div>
           ))}
         </div>
         <input type="text" disabled value={role} placeholder={role} />
-        <button type="submit">Submit</button>
+        <button className="submit-button" type="submit">Submit</button>
       </form>
     </div>
   );

@@ -45,7 +45,7 @@ export default function Blog(props) {
             onChange={(e) => setName(e.target.value)}
             placeholder="name"
           />
-          <button type="submit">Post</button>
+          <button className="post-button" type="submit">Post</button>
         </form>
       </div>
       <div>
