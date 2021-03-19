@@ -36,14 +36,12 @@ function App() {
         <h2>Welcome to Full House</h2>
         <p>A home for beginner coders to connect with coding professionals</p>
           </div>
-        <div className="mentor-link">
+        <div className="button-container">
           <Link to="/newform/mentor">
-            <button onClick={() => setRole("Mentor")}>Mentor</button>
-          </Link>
-        </div>
-        <div>
-          <Link to="/newform/mentee">
-            <button onClick={() => setRole("Mentee")}>Mentee</button>
+            <button className="home-page-buttons" onClick={() => setRole("Mentor")}>Mentor</button>
+          </Link>        
+        <Link to="/newform/mentee">
+            <button className="home-page-buttons" onClick={() => setRole("Mentee")}>Mentee</button>
           </Link>
         </div>
       </Route>

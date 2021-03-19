@@ -24,17 +24,7 @@ export default function ConnectionPage(props) {
   //use filter method through entries based on whats in props, get the mentees or mentors
   //output that on the page
   return (
-    <div>
-      <div className="post-container">
-        <form>
-          <label htmlFor="post">Make a post</label>
-          <input type="text" placeholder="make a post" />
-          <label htmlFor="author">Author</label>
-          <input type="text" placeholder="Author" />
-          <button>Post</button>
-        </form>
-      </div>
-      <div className="connect-container">
+    <div className="connect-container">
         <h3>Let's Connect</h3>
         {filtered.map((person) => {
           console.log(person)
@@ -52,7 +42,7 @@ export default function ConnectionPage(props) {
               <p>{aboutMe}</p>
               <p>{relationship}</p>
               <p>{contact}</p>
-              <button onClick={()=>deleteMember(person.id)}>Delete</button>
+              <button className="delete-button" onClick={()=>deleteMember(person.id)}>Delete</button>
               {/* //calling the function with an argument. i need to invoke the function inside of an anonoymous function */}
             </div>
           );

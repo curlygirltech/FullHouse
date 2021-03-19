@@ -61,10 +61,16 @@ background-color:#FFEF45;
 color: white;
 transform:scale(1.1);
 }
+.button-container{
+  display: flex;
+  justify-content: center;
+}
 
-/* button {
-  transition-duration: 0.4s;
-} */
+.home-page-buttons{
+  margin: 0 10px;
+  flex-wrap: wrap;
+
+}
 
 .body-2{
   border-top-left-radius: 15px;
