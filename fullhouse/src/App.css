@@ -10,6 +10,15 @@ body{
   min-height: 819px;
 }
 
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 39% 81%, 0 100%, 0% 50%);
+  position: absolute;
+  z-index: -4;
+}
+
 #root {
   height: 100%;
   width: 100%;
@@ -27,4 +36,13 @@ body{
   background: none;
   border: none;
   background-color: none;
+}
+
+@media only screen and (min-device-width: 1024px){
+  height: 100%;
+  width: 100%;
+  /* background-color: cadetblue;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 39% 81%, 0 100%, 0% 50%);
+  position: absolute;
+  z-index: -1; */
 }
