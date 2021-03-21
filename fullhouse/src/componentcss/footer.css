@@ -7,9 +7,10 @@
     font-size: 10px;
     display: flex;
     flex-direction: column;
-    /* height: 50px; */
+    font-family: 'Oswald', sans-serif;
+    /* height: 40px; */
     /* margin: auto; */
-    align-self: flex-end;
+    /* align-self: flex-end; */
     color:white;
     background-color: black;
   
@@ -29,12 +30,12 @@
     flex-flow: wrap;
     background-color: white;
   }
-  .linked-in{
-  margin: auto;
+  .social-media a{
+  margin: 0 10px;
   }
 
   .github{
-    margin: auto;
+    /* margin: auto; */
   }
 
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px){

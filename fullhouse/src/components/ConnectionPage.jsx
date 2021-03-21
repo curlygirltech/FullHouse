@@ -21,9 +21,9 @@ export default function ConnectionPage(props) {
   //use filter method through entries based on whats in props, get the mentees or mentors
   //output that on the page
   return (
-    <div>
+    <div className="the-den">
       <div className="connect-container">
-        <h3>Let's Connect</h3>
+        <h3>The Den</h3>
         {filtered.map((person) => {
           console.log(person);
           const {
@@ -35,7 +35,7 @@ export default function ConnectionPage(props) {
           } = person.fields;
           return (
             <div>
-              <h1>{name}</h1>
+              <h2>{name}</h2>
               <p>{languages}</p>
               <p>{aboutMe}</p>
               <p>{relationship}</p>

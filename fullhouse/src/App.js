@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignUpForm from "./components/SignUpForm";
 import Blog from "./components/Blog";
+import About from "./components/About";
 import ConnectionPage from "./components/ConnectionPage";
 import { Link, Route } from "react-router-dom";
 import axios from "axios";
@@ -49,10 +50,10 @@ function App() {
         <SignUpForm setToggleFetch={setToggleFetch} />
       </Route>
 
-      <Route path="/about">FullHouse About</Route>
-
+      <Route path="/about">
+          <About/>
+      </Route>
       <Route path="/blog">
-        FullHouse Blog
         <Blog setToggleFetch={setToggleFetch} />
       </Route>
 

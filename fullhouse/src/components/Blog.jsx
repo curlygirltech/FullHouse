@@ -28,17 +28,19 @@ export default function Blog(props) {
   };
   
   return (
-    <div>
+    <div className="blog-container">
+          <h2>Welcome to the Playground!</h2>
+          <p>Share your knowledge and post about hot industry topics here</p>
       <div className="post-container">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="post">Make a post</label>
+          <label htmlFor="post"></label>
           <input
             type="text"
             value={post}
             onChange={(e) => setPost(e.target.value)}
-            placeholder="make a post"
+            placeholder="Hot Topic"
           />
-          <label htmlFor="author">Author</label>
+          <label htmlFor="author"></label>
           <input
             type="text"
             value={name}

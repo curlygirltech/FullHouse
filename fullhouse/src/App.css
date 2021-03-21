@@ -21,6 +21,9 @@ body{
   margin: 10px 15px; 
 }
 
+p{
+  font-family: 'Oswald', sans-serif;
+}
 form {
   flex-flow: column;
   margin:15px;  
@@ -76,7 +79,7 @@ transform:scale(1.1);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color:white;
-  /* margin-top: 250px; */
+  margin-bottom: 60px;
 }
 
 #root {
