@@ -1,8 +1,10 @@
 .blog-container{
-  text-align:center;
+  margin-left: 15px;
 }
 
-
+.blog-container h2{
+  text-align: center;
+}
 
 
 

@@ -16,6 +16,7 @@ export default function ConnectionPage(props) {
   const filtered = data.filter((member) => {
     return member.fields.relationship !== role;
   });
+  console.log(filtered)
   // console.log(filtered);
 
   //use filter method through entries based on whats in props, get the mentees or mentors
@@ -23,7 +24,7 @@ export default function ConnectionPage(props) {
   return (
     <div className="the-den">
       <div className="connect-container">
-        <h3>The Den</h3>
+        <h2>The Den</h2>
         {filtered.map((person) => {
           console.log(person);
           const {

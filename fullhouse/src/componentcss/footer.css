@@ -38,6 +38,17 @@
     /* margin: auto; */
   }
 
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px){
-  
+  @media only screen and (min-device-width: 1074){
+
+    .footer-name{
+      display:flex;
+      flex-flow: column ;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 25px;
+    }
+
+    .social-media{
+      height: 20px;
+    }
   }
