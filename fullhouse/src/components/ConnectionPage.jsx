@@ -3,7 +3,7 @@ import "../componentcss/connection.css";
 import { baseURL, config } from "../services";
 
 export default function ConnectionPage(props) {
-  const { data, role } = props;
+  const { data, role, } = props;
 
   const deleteMember = async (memberId) => {
     console.log(memberId);
@@ -14,10 +14,10 @@ export default function ConnectionPage(props) {
   };
 
   const filtered = data.filter((member) => {
-    return member.fields.relationship !== role;
+    console.log(role)
+    return member.fields.relationship.toLowerCase() !== role.toLowerCase();
   });
-  console.log(filtered)
-  // console.log(filtered);
+  console.log(filtered) 
 
   //use filter method through entries based on whats in props, get the mentees or mentors
   //output that on the page
@@ -26,7 +26,6 @@ export default function ConnectionPage(props) {
       <div className="connect-container">
         <h2>The Den</h2>
         {filtered.map((person) => {
-          console.log(person);
           const {
             name,
             contact,
@@ -35,7 +34,7 @@ export default function ConnectionPage(props) {
             languages,
           } = person.fields;
           return (
-            <div>
+            <div key={person.id}>
               <h2>{name}</h2>
               <p>{languages}</p>
               <p>{aboutMe}</p>

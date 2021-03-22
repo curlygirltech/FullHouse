@@ -12,7 +12,7 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
-  const [role, setRole] = useState(""); //this is to autofill the form based on who is a mentee/mentor
+  const [role, setRole] = useState("mentee"); //this is to autofill the form based on who is a mentee/mentor
   const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
@@ -39,10 +39,10 @@ function App() {
           </div>
         <div className="button-container">
           <Link to="/newform/mentor">
-            <button className="home-page-buttons" onClick={() => setRole("Mentor")}>Mentor</button>
+            <button className="home-page-buttons" onClick={() => setRole("mentor")}>Mentor</button>
           </Link>        
         <Link to="/newform/mentee">
-            <button className="home-page-buttons" onClick={() => setRole("Mentee")}>Mentee</button>
+            <button className="home-page-buttons" onClick={() => setRole("mentee")}>Mentee</button>
           </Link>
         </div>
       </Route>
